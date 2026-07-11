@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>João Victor · Currículo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f7fafc;
+      color: #1a2a3a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .card {
+      max-width: 760px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 2rem;
+      padding: 2.8rem 3.2rem;
+      box-shadow: 0 4px 24px rgba(0, 20, 40, 0.02), 0 1px 4px rgba(0, 0, 0, 0.02);
+      border: 1px solid rgba(20, 60, 100, 0.04);
+      transition: all 0.2s ease;
+    }
+
+    /* cabeçalho */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(20, 60, 100, 0.04);
+    }
+
+    .name h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0a1e2e;
+      line-height: 1.2;
+    }
+    .name h1 span {
+      font-weight: 300;
+      color: #2a4a6a;
+    }
+
+    .title {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background: #f0f5fa;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      letter-spacing: 0.2px;
+      margin-top: 0.2rem;
+      border: 1px solid rgba(20, 60, 100, 0.03);
+      min-height: 30px;
+      min-width: 200px;
+      transition: box-shadow 0.3s ease;
+    }
+    .title .cursor {
+      display: inline-block;
+      width: 1px;
+      height: 14px;
+      background: #3a6a8a;
+      margin-left: 2px;
+      animation: blink 0.9s step-end infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .title .fixed {
+      color: #0a1e2e;
+      font-weight: 600;
+      text-shadow: 0 0 12px rgba(74, 138, 170, 0.15);
+      transition: text-shadow 0.3s;
+    }
+    .title:hover .fixed {
+      text-shadow: 0 0 20px rgba(74, 138, 170, 0.3), 0 0 40px rgba(74, 138, 170, 0.1);
+    }
+    .title .tool-loop {
+      color: #1a6a8a;
+      font-weight: 600;
+      min-width: 80px;
+      display: inline-block;
+    }
+    .title .separator {
+      color: #8aaac0;
+      font-weight: 300;
+      margin: 0 2px;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+      background: #fafcfe;
+      padding: 0.2rem 1rem;
+      border-radius: 60px;
+      border: 1px solid rgba(20, 60, 100, 0.02);
+    }
+    .contacts a,
+    .contacts span {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #2a4a6a;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.15s;
+    }
+    .contacts a:hover {
+      color: #0a1e2e;
+    }
+    .contacts i {
+      color: #4a7a9a;
+      font-size: 0.75rem;
+      width: 0.9rem;
+    }
+
+    /* seções */
+    .section {
+      margin-bottom: 1.8rem;
+    }
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: #3a6a8a;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(20, 60, 100, 0.03);
+      padding-bottom: 0.4rem;
+    }
+    .section-label i {
+      font-size: 0.8rem;
+      color: #4a8aaa;
+      width: 1.2rem;
+    }
+
+    .text {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #2a3a4a;
+    }
+    .text strong {
+      color: #0a1e2e;
+      font-weight: 600;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem 0.6rem;
+      margin-top: 0.6rem;
+    }
+    .chip {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: #2a4a6a;
+      background: #f0f5fa;
+      padding: 0.1rem 0.9rem;
+      border-radius: 40px;
+      border: 1px solid rgba(20, 60, 100, 0.02);
+      transition: all 0.25s ease;
+    }
+    .chip i {
+      font-size: 0.6rem;
+      margin-right: 4px;
+      color: #4a7a9a;
+    }
+    .chip:hover {
+      background: #e4ecf4;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(74, 138, 170, 0.12), 0 0 24px rgba(74, 138, 170, 0.04);
+      border-color: rgba(74, 138, 170, 0.08);
+    }
+
+    /* competências com ícones */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.8rem;
+      margin-top: 0.2rem;
+    }
+    .skill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f5f9fc;
+      padding: 0.2rem 1rem 0.2rem 0.8rem;
+      border-radius: 40px;
+      border: 1px solid rgba(20, 60, 100, 0.02);
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: #1a3a4a;
+      transition: all 0.25s ease;
+      cursor: default;
+    }
+    .skill:hover {
+      background: #eef4f8;
+      border-color: rgba(74, 138, 170, 0.1);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 4px 18px rgba(74, 138, 170, 0.08), 0 0 28px rgba(74, 138, 170, 0.03);
+    }
+    .skill i {
+      font-size: 0.75rem;
+      color: #4a8aaa;
+      width: 1.1rem;
+      text-align: center;
+    }
+
+    /* experiências */
+    .exp {
+      margin-bottom: 1.2rem;
+    }
+    .exp:last-child {
+      margin-bottom: 0;
+    }
+    .exp .head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.1rem;
+    }
+    .exp .org {
+      font-weight: 600;
+      color: #0a1e2e;
+      font-size: 0.9rem;
+    }
+    .exp .org i {
+      color: #4a7a9a;
+      font-size: 0.65rem;
+      margin-right: 4px;
+    }
+    .exp .role {
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: #3a6a8a;
+      background: #f0f5fa;
+      padding: 0 0.6rem;
+      border-radius: 30px;
+    }
+    .exp .period {
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: #5a7a8a;
+      background: #f4f8fc;
+      padding: 0 0.6rem;
+      border-radius: 30px;
+    }
+    .exp ul {
+      list-style: none;
+      padding-left: 0.2rem;
+      margin-top: 0.1rem;
+    }
+    .exp ul li {
+      position: relative;
+      padding-left: 1rem;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: #3a4a5a;
+      margin-bottom: 0.1rem;
+    }
+    .exp ul li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: #4a8aaa;
+      font-size: 0.7rem;
+    }
+    .exp ul li strong {
+      color: #0a1e2e;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+    /* Efeito glow nos números das descrições */
+    .exp ul li strong:hover {
+      text-shadow: 0 0 12px rgba(74, 138, 170, 0.25), 0 0 24px rgba(74, 138, 170, 0.08);
+      color: #0a1e2e;
+    }
+
+    /* formação */
+    .edu .org {
+      font-weight: 600;
+      color: #0a1e2e;
+      font-size: 0.9rem;
+    }
+    .edu .org i {
+      color: #4a7a9a;
+      margin-right: 4px;
+    }
+    .edu .meta {
+      font-size: 0.75rem;
+      color: #4a6a7a;
+      margin-top: 0.1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .edu .meta i {
+      color: #4a7a9a;
+      width: 0.9rem;
+    }
+
+    .extras {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem 1rem;
+      margin-top: 0.6rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid rgba(20, 60, 100, 0.02);
+    }
+    .extras span {
+      font-size: 0.7rem;
+      color: #4a6a7a;
+      background: #f4f8fc;
+      padding: 0.1rem 0.8rem;
+      border-radius: 40px;
+      border: 1px solid rgba(20, 60, 100, 0.01);
+      transition: all 0.2s;
+    }
+    .extras span:hover {
+      background: #e8eef4;
+      box-shadow: 0 2px 12px rgba(74, 138, 170, 0.06);
+    }
+    .extras i {
+      margin-right: 4px;
+      color: #4a7a9a;
+      font-size: 0.65rem;
+    }
+
+    .footer {
+      margin-top: 1.8rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.2rem;
+      font-size: 0.6rem;
+      color: #6a8a9a;
+      border-top: 1px solid rgba(20, 60, 100, 0.02);
+      padding-top: 0.8rem;
+      letter-spacing: 0.2px;
+    }
+    .footer i {
+      color: #4a7a9a;
+      margin-right: 2px;
+    }
+
+    /* responsivo */
+    @media (max-width: 640px) {
+      .card {
+        padding: 1.6rem 1.4rem;
+      }
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+      }
+      .contacts {
+        width: 100%;
+        padding: 0.2rem 0.8rem;
+      }
+      .name h1 {
+        font-size: 1.6rem;
+      }
+      .exp .head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1rem;
+      }
+      .skills {
+        gap: 0.4rem 0.6rem;
+      }
+      .title .tool-loop {
+        min-width: 60px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .card {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- cabeçalho -->
+    <div class="header">
+      <div class="name">
+        <h1>João Victor Nascimento Aguiar</h1>
+        <div class="title" id="typingArea">
+          <i class="fas fa-chart-line"></i>
+          <span class="fixed">Analista Financeiro</span>
+          <span class="separator">·</span>
+          <span class="tool-loop" id="dynamicText"></span>
+          <span class="cursor"></span>
+        </div>
+      </div>
+      <div class="contacts">
+        <span><i class="fas fa-map-pin"></i> São Paulo/SP</span>
+        <a href="#"><i class="fas fa-phone-alt"></i> (18) 99663-9108</a>
+        <a href="#"><i class="fas fa-envelope"></i> joaonascimento@outlook.com</a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i> in/joaonascimentto/</a>
+      </div>
+    </div>
+
+    <!-- resumo -->
+    <div class="section">
+      <div class="section-label"><i class="fas fa-chart-pie"></i> Perfil</div>
+      <div class="text">
+        <p>Graduado em Administração com vivência nas rotinas de <strong>contas a pagar, contas a receber</strong>, atuando com alto volume de transações em ambientes corporativos. Domínio operacional nos ERP <strong>SAP S/4 Hana</strong> (MM e FI) e <strong>TOTVS Protheus</strong>, com foco em controle de despesas, processamento de notas fiscais e suporte ao fechamento financeiro.</p>
+        <p style="margin-top:0.4rem;">Conhecimentos em <strong>Inteligência Artificial</strong> aplicada a finanças (GPT Agents, Claude Code) para automação de relatórios, dashboards e análise avançada de dados.</p>
+
+        <div class="chips">
+          <span class="chip"><i class="fas fa-calculator"></i> SAP S/4 Hana</span>
+          <span class="chip"><i class="fas fa-database"></i> TOTVS Protheus</span>
+          <span class="chip"><i class="fas fa-chart-bar"></i> Power BI</span>
+          <span class="chip"><i class="fas fa-file-excel"></i> Excel Avançado</span>
+          <span class="chip"><i class="fas fa-robot"></i> GPT Agents</span>
+          <span class="chip"><i class="fas fa-code"></i> Claude Code</span>
+          <span class="chip"><i class="fas fa-brain"></i> IA aplicada a Finanças</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- competências com ícones -->
+    <div class="section">
+      <div class="section-label"><i class="fas fa-tachometer-alt"></i> Competências</div>
+      <div class="skills">
+        <span class="skill"><i class="fas fa-arrows-left-right"></i> Contas a Pagar/Receber</span>
+        <span class="skill"><i class="fas fa-coins"></i> Gestão Financeira</span>
+        <span class="skill"><i class="fas fa-calculator"></i> CAPEX/OPEX</span>
+        <span class="skill"><i class="fas fa-handshake"></i> Gestão de Fornecedores</span>
+        <span class="skill"><i class="fas fa-chart-pie"></i> Dashboards & BI</span>
+        <span class="skill"><i class="fas fa-file-invoice"></i> Faturamento</span>
+        <span class="skill"><i class="fas fa-robot"></i> Automação</span>
+      </div>
+    </div>
+
+    <!-- experiências -->
+    <div class="section">
+      <div class="section-label"><i class="fas fa-briefcase"></i> Experiência</div>
+
+      <div class="exp">
+        <div class="head">
+          <span class="org"><i class="fas fa-hospital"></i> Hospital das Clínicas da FMUSP</span>
+          <span class="role">Assistente Administrativo</span>
+          <span class="period">Abril 2025 – Janeiro 2026</span>
+        </div>
+        <ul>
+          <li>Reduzi os erros operacionais de compliance e documentação em <strong>30%</strong> na rotina do ambulatório, implementando e padronizando um checklist rigoroso de auditoria interna para a conferência de guias de agendamento.</li>
+          <li>Assegurei <strong>100% de acurácia</strong> no registro de dados do sistema de saúde, mitigando retrabalhos em encaminhamentos médicos através da consolidação diária e monitoramento do fluxo operacional de pacientes.</li>
+          <li>Estruturei relatórios de indicadores de desempenho gerencial para suporte direto à coordenação geral na tomada de decisões estratégicas, convertendo dados brutos em inteligência operacional.</li>
+        </ul>
+      </div>
+
+      <div class="exp">
+        <div class="head">
+          <span class="org"><i class="fas fa-truck"></i> SEST SENAT</span>
+          <span class="role">Assistente Administrativo</span>
+          <span class="period">Novembro 2023 – Maio 2024</span>
+        </div>
+        <ul>
+          <li>Reduzi a inadimplência de títulos financeiros em <strong>8%</strong>, através da execução de réguas de cobrança ativa, atendimento consultivo focado na negociação de débitos e emissão estratégica de boletos bancários em atraso.</li>
+          <li>Aumentei a eficiência de liquidação financeira para <strong>98%</strong> dos títulos, garantindo a baixa bancária automatizada e o processamento de recebimentos em conta corrente em um prazo máximo de até 24 horas pós-compensação.</li>
+          <li>Mitiguei os erros de conciliação bancária nos fechamentos mensais em <strong>40%</strong>, desenhando e implementando um novo processo padronizado de auditoria interna para conferência de títulos baixados.</li>
+        </ul>
+      </div>
+
+      <div class="exp">
+        <div class="head">
+          <span class="org"><i class="fas fa-store"></i> DECISION · Assaí Atacadista</span>
+          <span class="role">Assistente Financeiro</span>
+          <span class="period">Dezembro 2022 – Julho 2023</span>
+        </div>
+        <ul>
+          <li>Garantia o processamento mensal de mais de <strong>250</strong> notas fiscais de fornecedores sem incidência de multas por atraso, operando as rotinas operacionais no ERP SAP S/4 Hana (Módulos MM e FI) dentro do prazo médio de 30 dias.</li>
+          <li>Eliminei custos com juros e encargos em <strong>98%</strong> das faturas emitidas, monitorando o fluxo de pagamentos de fornecedores e assegurando a liquidação rigorosa antes do vencimento dos títulos.</li>
+          <li>Gerenciei o controle orçamentário de despesas CAPEX e OPEX de projetos de TI, garantindo <strong>100%</strong> de rastreabilidade de custos e gerando sinergia direta com a área de Controladoria.</li>
+          <li>Assegurei a conformidade orçamentária de <strong>100%</strong> das aquisições de tecnologia, controlando a criação de pedidos de compra no SAP em estrito alinhamento com o budget aprovado.</li>
+          <li>Mitiguei riscos fiscais e autuações legais, realizando a interface direta com as equipes de Tributário e Controladoria para a validação da classificação fiscal e retenções na fonte de notas fiscais recebidas.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- formação -->
+    <div class="section">
+      <div class="section-label"><i class="fas fa-graduation-cap"></i> Formação</div>
+      <div class="edu">
+        <div class="org"><i class="fas fa-university"></i> Administração · Faculdade Metodista de Ciências Humanas e Exatas</div>
+        <div class="meta"><span><i class="far fa-calendar-alt"></i> Conclusão: Dezembro 2017</span></div>
+      </div>
+      <div class="extras">
+        <span><i class="fas fa-clock"></i> Disponibilidade imediata</span>
+        <span><i class="fas fa-rocket"></i> Foco em Ascensão Corporativa</span>
+        <span><i class="fas fa-code"></i> Interesse: Automação de Processos Financeiros</span>
+        <span><i class="fas fa-globe"></i> Inglês Técnico</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // ===== LOOP INFINITO NO BLOCO .tool-loop =====
+      const dynamicEl = document.getElementById('dynamicText');
+      const tools = [
+        'SAP S/4 Hana',
+        'TOTVS Protheus',
+        'GPT Agents',
+        'Claude Code',
+        'Dashboards',
+        'Análise de Dados',
+        'Excel Avançado'
+      ];
+      let index = 0, charIdx = 0, deleting = false;
+
+      function typeTools() {
+        const current = tools[index];
+        if (!deleting) {
+          dynamicEl.textContent = current.substring(0, charIdx + 1);
+          charIdx++;
+          if (charIdx === current.length) {
+            deleting = true;
+            setTimeout(typeTools, 2000);
+            return;
+          }
+          setTimeout(typeTools, 45);
+        } else {
+          dynamicEl.textContent = current.substring(0, charIdx - 1);
+          charIdx--;
+          if (charIdx === 0) {
+            deleting = false;
+            index = (index + 1) % tools.length;
+            setTimeout(typeTools, 300);
+            return;
+          }
+          setTimeout(typeTools, 20);
+        }
+      }
+      setTimeout(typeTools, 300);
+    })();
+  </script>
+
+</body>
+</html>
